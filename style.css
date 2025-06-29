@@ -133,6 +133,26 @@ button:hover {
 .delete-btn:hover {
   background-color: #b02a37;
 }
+/* Form field with label and input */
+.field-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Optional: for side-by-side on large screens */
+@media (min-width: 768px) {
+  .field-group {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .field-group label {
+    width: 160px;
+    font-weight: bold;
+  }
+}
+
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
