@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Course & Exam Booking</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="hero">
+    <h1>📚 Online Academic Booking System  </h1>
+    <p> <strong>Your one-stop platform for course registration, exam booking & scheduling.</strong></p>
+  </div>
+
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('course')">📘Course Booking</button>
+    <button class="tab-btn" onclick="switchTab('exam')">📝Exam Slot Booking</button>
+    <button class="tab-btn" onclick="switchTab('schedule')">📅Class Schedule</button>
+    <button class="tab-btn" onclick="switchTab('history')">📋 Booking History</button>
+  </div>
+
+  <!-- Course Booking Tab -->
+  <div class="tab-content active" id="course">
+    <form id="courseForm">
+      <h2>📘 Course Booking</h2>
+      <input type="text" id="name" placeholder="Full Name" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="text" id="regId" placeholder="Register ID" required />
+      <input type="text" id="branch" placeholder="Branch (e.g., CSE)" required />
+
+      <select id="courseSelect" required>
+        <option value="">-- Select Course --</option>
+        <option>Python</option>
+        <option>Java</option>
+        <option>Web Development</option>
+        <option>Data Science</option>
+        <option>Data Engineering</option>
+        <option>AI Basics</option>
+        <option>Gen AI</option>
+        <option>C</option>
+        <option>C++</option>
+        <option>DBMS</option>
+        <option>Computer Organization</option>
+      </select>
+      <select id="courseDuration" required>
+        <option value="">-- Select Course Duration --</option>
+        <option>1 Month</option>
+        <option>2 Months</option>
+        <option>3 Months</option>
+        <option>4 Months</option>
+      </select>
+      <input type="date" id="courseDate" required />
+      <button type="submit">Book Course</button>
+      <button type="button" onclick="printCourse()">🖨️ Print</button>
+    </form>
+  </div>
+
+  <!-- Exam Booking Tab -->
+  <div class="tab-content" id="exam">
+    <form id="examForm">
+      <h2>📝 Exam Slot Booking</h2>
+      <input type="text" id="examName" placeholder="Full Name" required />
+      <input type="email" id="examEmail" placeholder="Email" required />
+      <input type="text" id="examRegId" placeholder="Register ID" required />
+      <input type="text" id="examBranch" placeholder="Branch (e.g., IT)" required />
+
+      <select id="examCourse" required>
+        <option value="">-- Select Exam Course --</option>
+        <option>Python</option>
+        <option>Java</option>
+        <option>Data Science</option>
+        <option>AI Basics</option>
+      </select>
+      <input type="date" id="examDate" required />
+      <input type="time" id="examTime" required />
+      <button type="submit">Book Exam</button>
+      <button type="button" onclick="printExam()">🖨️ Print</button>
+    </form>
+  </div>
+
+ <!-- Class Schedule Tab -->
+<div class="tab-content" id="schedule">
+  <h2>📅 Select Class Schedule</h2>
+  <form id="scheduleForm">
+    <input type="text" id="scheduleName" placeholder="Full Name" required />
+    <input type="email" id="scheduleEmail" placeholder="Email" required />
+    <input type="text" id="scheduleRegId" placeholder="Register ID" required />
+    <input type="text" id="scheduleBranch" placeholder="Branch (e.g., ECE)" required />
+
+    <select id="days" required>
+      <option value="">-- Select Days --</option>
+      <option>Mon/Wed/Fri</option>
+      <option>Tue/Thu/Sat</option>
+      <option>Weekend Only</option>
+    </select>
+    <select id="timeSlot" required>
+      <option value="">-- Select Time Slot --</option>
+      <option>Morning (9 AM - 11 AM)</option>
+      <option>Afternoon (1 PM - 3 PM)</option>
+      <option>Evening (6 PM - 8 PM)</option>
+    </select>
+    <button type="submit">Save Schedule</button>
+    <button type="button" onclick="printSchedule()">🖨️ Print</button>
+  </form>
+</div>
+
+
+
+  <!-- Booking History Tab -->
+  <div class="tab-content" id="history">
+    <h2>📋 Booking History</h2>
+    <button id="clearBookingsBtn" type="button">🗑️ Clear All Bookings</button>
+    <div id="historyList">Loading...</div>
+  </div>
+
+  <div id="confirmationBox"></div>
+  <script src="script.js"></script>
+</body>
+</html>
+
