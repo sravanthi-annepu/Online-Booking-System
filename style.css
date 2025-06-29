@@ -1,4 +1,4 @@
-/* General Reset & Fonts */
+
 * {
   box-sizing: border-box;
   font-family: Arial, sans-serif;
@@ -21,13 +21,13 @@ h1{
   margin-top: 20px;
   margin-bottom: 20px;
 }
-/* Hero Section */
+
 .hero {
   text-align: center;
   margin-bottom: 50px;
 }
 
-/* Tabs Navigation */
+
 .tabs {
   display: flex;
   justify-content: center;
@@ -52,7 +52,7 @@ h1{
   background-color: #00b4d8;
 }
 
-/* Tab Content Styling */
+
 .tab-content {
   display: none;
   background: white;
@@ -91,7 +91,7 @@ button:hover {
   background-color: #0077b6;
 }
 
-/* Confirmation Message Box */
+
 #confirmationBox {
   margin-top: 20px;
   text-align: center;
@@ -101,13 +101,13 @@ button:hover {
   font-weight: bold;
 }
 
-/* Clear Button */
+
 #clearBookingsBtn {
   background-color: #ff4d4d;
   margin-bottom: 10px;
 }
 
-/* History Items */
+
 .history-item {
   padding: 10px;
   background: #f1f1f1;
@@ -116,7 +116,7 @@ button:hover {
   position: relative;
 }
 
-/* Delete Button */
+
 .delete-btn {
   position: absolute;
   right: 10px;
@@ -133,13 +133,14 @@ button:hover {
 .delete-btn:hover {
   background-color: #b02a37;
 }
-/* Form field with label and input */
+
+
 .field-group {
   display: flex;
   flex-direction: column;
 }
 
-/* Optional: for side-by-side on large screens */
+
 @media (min-width: 768px) {
   .field-group {
     flex-direction: row;
@@ -154,7 +155,6 @@ button:hover {
 }
 
 
-/* Mobile Responsive */
 @media (max-width: 768px) {
   .tabs {
     flex-direction: column;
