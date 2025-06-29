@@ -19,7 +19,7 @@
     <button class="tab-btn" onclick="switchTab('history')">📋 Booking History</button>
   </div>
 
-  <!-- Course Booking Tab -->
+
   <div class="tab-content active" id="course">
     <form id="courseForm">
       <h2>📘 Course Booking</h2>
@@ -68,6 +68,7 @@
       <input type="text" id="examBranch" placeholder="Branch (e.g., IT)" required />
 
       <select id="examCourse" required>
+        <option value="">-- Select Course --</option>
         <option>Python</option>
         <option>Java</option>
         <option>Web Development</option>
@@ -122,7 +123,7 @@
 
 
 
-  <!-- Booking History Tab -->
+  
   <div class="tab-content" id="history">
     <h2>📋 Booking History</h2>
     <button id="clearBookingsBtn" type="button">🗑️ Clear All Bookings</button>
