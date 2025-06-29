@@ -49,13 +49,16 @@
         <option>3 Months</option>
         <option>4 Months</option>
       </select>
-      <input type="date" id="courseDate" required />
+      <div class="field-group">
+      <label for="courseDate">📅 Course Start Date:</label>
+     <input type="date" id="courseDate" required />
+     </div>
       <button type="submit">Book Course</button>
       <button type="button" onclick="printCourse()">🖨️ Print</button>
     </form>
   </div>
 
-  <!-- Exam Booking Tab -->
+  
   <div class="tab-content" id="exam">
     <form id="examForm">
       <h2>📝 Exam Slot Booking</h2>
@@ -71,14 +74,17 @@
         <option>Data Science</option>
         <option>AI Basics</option>
       </select>
-      <input type="date" id="examDate" required />
-      <input type="time" id="examTime" required />
+      
+       <div class="field-group">
+         <label for="examTime">⏰ Exam Time:</label>
+          <input type="time" id="examTime" required />
+        </div>
       <button type="submit">Book Exam</button>
       <button type="button" onclick="printExam()">🖨️ Print</button>
     </form>
   </div>
 
- <!-- Class Schedule Tab -->
+
 <div class="tab-content" id="schedule">
   <h2>📅 Select Class Schedule</h2>
   <form id="scheduleForm">
