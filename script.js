@@ -1,4 +1,4 @@
-// Tab switching
+
 function switchTab(tabId) {
   document.querySelectorAll('.tab-content').forEach(tab => {
     tab.classList.remove('active');
@@ -13,7 +13,7 @@ function switchTab(tabId) {
   if (tabId === 'history') displayBookingHistory();
 }
 
-// Book Course
+
 document.getElementById("courseForm").addEventListener("submit", function(e) {
   e.preventDefault();
   const course = document.getElementById("courseSelect").value;
@@ -30,7 +30,7 @@ document.getElementById("courseForm").addEventListener("submit", function(e) {
   showConfirmation("✅ Course booked successfully.");
 });
 
-// Book Exam
+
 document.getElementById("examForm").addEventListener("submit", function(e) {
   e.preventDefault();
   const course = document.getElementById("examCourse").value;
@@ -47,7 +47,7 @@ document.getElementById("examForm").addEventListener("submit", function(e) {
   showConfirmation("✅ Exam slot booked successfully.");
 });
 
-// Save Schedule
+
 document.getElementById("scheduleForm").addEventListener("submit", function(e) {
   e.preventDefault();
   const days = document.getElementById("days").value;
@@ -61,14 +61,13 @@ document.getElementById("scheduleForm").addEventListener("submit", function(e) {
   showConfirmation("✅ Schedule saved.");
 });
 
-// Save to localStorage
 function saveBooking(booking) {
   const bookings = JSON.parse(localStorage.getItem("bookings")) || [];
   bookings.push(booking);
   localStorage.setItem("bookings", JSON.stringify(bookings));
 }
 
-// Display Booking History
+
 function displayBookingHistory() {
   const historyDiv = document.getElementById("historyList");
   const bookings = JSON.parse(localStorage.getItem("bookings")) || [];
@@ -97,7 +96,7 @@ function displayBookingHistory() {
   }).join("");
 }
 
-// Delete single booking
+
 window.deleteBooking = function(index) {
   let bookings = JSON.parse(localStorage.getItem("bookings")) || [];
   bookings.splice(index, 1);
@@ -106,7 +105,7 @@ window.deleteBooking = function(index) {
   showConfirmation("✅ Booking deleted.");
 };
 
-// Clear All
+
 document.getElementById("clearBookingsBtn").addEventListener("click", () => {
   const confirmClear = window.confirm("⚠️ Are you sure you want to delete all booking history?");
   if (confirmClear) {
@@ -117,8 +116,7 @@ document.getElementById("clearBookingsBtn").addEventListener("click", () => {
 });
 
 
-// Print Functions
-// Print Course Confirmation
+
 function printCourse() {
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
@@ -145,7 +143,7 @@ function printCourse() {
 }
 
 
-// Print Exam Confirmation
+
 function printExam() {
   const name = document.getElementById("examName").value;
   const email = document.getElementById("examEmail").value;
@@ -170,7 +168,7 @@ function printExam() {
   printContent(content);
 }
 
-// Print Schedule Confirmation
+
 function printSchedule() {
   const name = document.getElementById("scheduleName").value;
   const email = document.getElementById("scheduleEmail").value;
@@ -196,7 +194,7 @@ function printSchedule() {
 
 
 
-// Shared function for printing
+
 function printContent(html) {
   const win = window.open("", "Print", "width=700,height=500");
   win.document.write(`
